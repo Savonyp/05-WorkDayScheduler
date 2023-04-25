@@ -49,7 +49,6 @@ for (var i = 9; i < 18; i++) {
     localStorage.setItem('textarea' + (i-8), textarea.value);
   });
 }
-/* local storage button doesnt work when i refresh page like where is it saving to.. */
 
 // LocalStorage save button
 $(".saveBtn").on("click", function(){
@@ -60,6 +59,13 @@ $(".saveBtn").on("click", function(){
   localStorage.setItem(hourSpan, JSON.stringify(userInput));
 
 })
+
+/* ndd to add retrieve data for local storage 
+    $("#hour-09 .time-block").val(localStorage.getItem("09"));
+                          or
+    var init9 = JSON.parse(localStorage.getItem("09am"));
+  nineAm.val(init9); n so on
+ */
 
 // updates the timeblocks to reflect whether they are in the past, present, or future
 function updateBlocks() {
